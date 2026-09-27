@@ -1,5 +1,8 @@
 #define _GNU_SOURCE
 #include "perf_metrics.h"
+#ifdef NDEBUG
+#undef NDEBUG
+#endif
 #include <assert.h>
 #include <errno.h>
 #include <linux/perf_event.h>
