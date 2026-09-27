@@ -1,0 +1,40 @@
+name: Linux build and tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        compiler: [gcc, clang]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test with O2
+        run: make test CC=${{ matrix.compiler }}
+      - name: Address and undefined behavior sanitizers
+        run: make sanitize CC=${{ matrix.compiler }}
+      - name: Rebuild release binary
+        run: make clean && make CC=${{ matrix.compiler }}
+      - name: Capture reproducible experiment
+        env:
+          CC: ${{ matrix.compiler }}
+        run: bash scripts/run_experiment.sh results
+      - name: Probe PMU with runner administrator privileges
+        shell: bash
+        run: |
+          set +e
+          sudo ./build/linkbench --lists 4 --nodes 10000 --queries 2000 --repeat 3 --require-perf 2>&1 | tee results/privileged-pmu.log
+          code=${PIPESTATUS[0]}
+          set -e
+          echo "exit_code=$code" >> results/privileged-pmu.log
+          test "$code" -eq 0 || test "$code" -eq 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: experiment-${{ matrix.compiler }}
+          path: results/
