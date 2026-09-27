@@ -104,6 +104,14 @@ ssize_t __wrap_read(int fd, void *data, size_t size)
     return (ssize_t)size;
 }
 
+/* glibc fortification may replace read() with __read_chk() at -O2.
+   Route that entry point through the same simulated kernel response. */
+ssize_t __wrap___read_chk(int fd, void *data, size_t size, size_t capacity)
+{
+    assert(size <= capacity);
+    return __wrap_read(fd, data, size);
+}
+
 static void reset(size_t count)
 {
     opens = closes = fail_open = fail_control = read_mode = reads = 0;

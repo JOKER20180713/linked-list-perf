@@ -17,7 +17,7 @@ build/test_link: tests/test_link.c src/link.c include/link.h | build
 	$(CC) $(CPPFLAGS) $(CFLAGS) tests/test_link.c src/link.c $(LDFLAGS) -o $@
 
 build/test_perf: tests/test_perf.c src/perf_metrics.c include/perf_metrics.h | build
-	$(CC) $(CPPFLAGS) $(CFLAGS) tests/test_perf.c src/perf_metrics.c $(LDFLAGS) -Wl,--wrap=syscall,--wrap=ioctl,--wrap=read,--wrap=close $(LDLIBS) -o $@
+	$(CC) $(CPPFLAGS) $(CFLAGS) tests/test_perf.c src/perf_metrics.c $(LDFLAGS) -Wl,--wrap=syscall,--wrap=ioctl,--wrap=read,--wrap=__read_chk,--wrap=close $(LDLIBS) -o $@
 
 test: all build/test_link build/test_perf
 	./build/test_link
