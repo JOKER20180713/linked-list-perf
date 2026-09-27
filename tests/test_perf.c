@@ -124,7 +124,12 @@ int main(void)
         reset(n);
         assert(PerfOpen(&group, events, n) == 0);
         assert(PerfStart(&group) == 0);
-        assert(PerfStop(&group) == 0 && group.valid);
+        int stopped = PerfStop(&group);
+        if (stopped != 0)
+            fprintf(stderr, "PerfStop for %zu events: %s; ids=%llu,%llu reads=%d\n",
+                    n, group.error, (unsigned long long)group.id[0],
+                    (unsigned long long)group.id[1], reads);
+        assert(stopped == 0 && group.valid);
         assert(group.raw[0] == 20 && group.value[0] == 40);
         if (n == 2)
             assert(group.raw[1] == 40 && group.value[1] == 80);
