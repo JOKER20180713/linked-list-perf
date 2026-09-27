@@ -1,0 +1,78 @@
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=10000 total_nodes=40000 payload_bytes=64 header_bytes=32
+queries=2000 expected_hits=1000 mode=mixed pattern=varied seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=19983273 verified=yes
+elapsed_ns: 74405710
+ns_per_search: 37202.855
+instructions: N/A [instructions: No such file or directory (errno=2)]
+cycles: N/A [instructions: No such file or directory (errno=2)]
+L1D_load_accesses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_load_misses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_store_accesses: N/A [L1D-stores: No such file or directory (errno=2)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=19983273 verified=yes
+elapsed_ns: 34316274
+ns_per_search: 17158.137
+instructions: N/A [instructions: No such file or directory (errno=2)]
+cycles: N/A [instructions: No such file or directory (errno=2)]
+L1D_load_accesses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_load_misses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_store_accesses: N/A [L1D-stores: No such file or directory (errno=2)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=19983273 verified=yes
+elapsed_ns: 34274816
+ns_per_search: 17137.408
+instructions: N/A [instructions: No such file or directory (errno=2)]
+cycles: N/A [instructions: No such file or directory (errno=2)]
+L1D_load_accesses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_load_misses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_store_accesses: N/A [L1D-stores: No such file or directory (errno=2)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=19983273 verified=yes
+elapsed_ns: 64719596
+ns_per_search: 32359.798
+instructions: N/A [instructions: No such file or directory (errno=2)]
+cycles: N/A [instructions: No such file or directory (errno=2)]
+L1D_load_accesses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_load_misses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_store_accesses: N/A [L1D-stores: No such file or directory (errno=2)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=19983273 verified=yes
+elapsed_ns: 56693697
+ns_per_search: 28346.849
+instructions: N/A [instructions: No such file or directory (errno=2)]
+cycles: N/A [instructions: No such file or directory (errno=2)]
+L1D_load_accesses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_load_misses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_store_accesses: N/A [L1D-stores: No such file or directory (errno=2)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=19983273 verified=yes
+elapsed_ns: 34503013
+ns_per_search: 17251.506
+instructions: N/A [instructions: No such file or directory (errno=2)]
+cycles: N/A [instructions: No such file or directory (errno=2)]
+L1D_load_accesses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_load_misses: N/A [L1D-loads: No such file or directory (errno=2)]
+L1D_store_accesses: N/A [L1D-stores: No such file or directory (errno=2)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+exit_code=2

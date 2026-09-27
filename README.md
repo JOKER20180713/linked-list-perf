@@ -4,6 +4,8 @@
 
 题目内嵌的 [link1.md](docs/link1.md) 已从 Word 的 OLE 附件中提取，原文保存在仓库中；[设计与要求对应说明](docs/design.md) 解释实现、测量口径和规模限制。
 
+[Linux 自动测试已通过](https://github.com/JOKER20180713/linked-list-perf/actions/runs/36311407062)：GCC、Clang、功能测试及内存安全检查。真实日志和硬件计数的环境限制见 [验证记录](docs/verification.md)；本次云端虚拟机没有提供所请求的 PMU 事件，相关指标显示 N/A。
+
 ## 快速运行
 
 要求：64 位 Linux、GCC 或 Clang、Make；测试另需 Python 3。Windows 原生无法调用 Linux 的 `perf_event_open()`，可使用有 PMU 支持的 Linux 实机或虚拟机。WSL 和云端虚拟机不一定暴露硬件计数器。

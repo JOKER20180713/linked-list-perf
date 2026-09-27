@@ -1,0 +1,844 @@
+Experiment timestamp: 2026-09-27T10:05:22+00:00
+Linux runnervmtr4k5 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           48 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  4
+On-line CPU(s) list:                     0-3
+Vendor ID:                               AuthenticAMD
+Model name:                              AMD EPYC 7763 64-Core Processor
+CPU family:                              25
+Model:                                   1
+Thread(s) per core:                      2
+Core(s) per socket:                      2
+Socket(s):                               1
+Stepping:                                1
+BogoMIPS:                                4890.85
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves user_shstk clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+Virtualization:                          AMD-V
+Hypervisor vendor:                       Microsoft
+Virtualization type:                     full
+L1d cache:                               64 KiB (2 instances)
+L1i cache:                               64 KiB (2 instances)
+L2 cache:                                1 MiB (2 instances)
+L3 cache:                                32 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-3
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Vulnerable: Safe RET, no microcode
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Vulnerable: No microcode
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+
+perf_event_paranoid=4
+
+Compiler
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+
+Build command: make (C11, O2, no O3)
+make: Nothing to be done for 'all'.
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode head --pattern varied
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=1000 mode=head pattern=varied seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=6247400 verified=yes
+elapsed_ns: 5721
+ns_per_search: 5.721
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=6247400 verified=yes
+elapsed_ns: 7204
+ns_per_search: 7.204
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=6247400 verified=yes
+elapsed_ns: 7123
+ns_per_search: 7.123
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=6247400 verified=yes
+elapsed_ns: 6512
+ns_per_search: 6.512
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=6247400 verified=yes
+elapsed_ns: 6513
+ns_per_search: 6.513
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=6247400 verified=yes
+elapsed_ns: 7133
+ns_per_search: 7.133
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode tail --pattern varied
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=1000 mode=tail pattern=varied seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=10342400 verified=yes
+elapsed_ns: 14504238
+ns_per_search: 14504.238
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=10342400 verified=yes
+elapsed_ns: 9939751
+ns_per_search: 9939.751
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=10342400 verified=yes
+elapsed_ns: 9667511
+ns_per_search: 9667.511
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=10342400 verified=yes
+elapsed_ns: 14261583
+ns_per_search: 14261.583
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=10342400 verified=yes
+elapsed_ns: 14302018
+ns_per_search: 14302.018
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=10342400 verified=yes
+elapsed_ns: 9629790
+ns_per_search: 9629.790
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode hit --pattern varied
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=1000 mode=hit pattern=varied seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=8296019 verified=yes
+elapsed_ns: 7239576
+ns_per_search: 7239.576
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=8296019 verified=yes
+elapsed_ns: 4814655
+ns_per_search: 4814.655
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=8296019 verified=yes
+elapsed_ns: 4800038
+ns_per_search: 4800.038
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=8296019 verified=yes
+elapsed_ns: 7193368
+ns_per_search: 7193.368
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=8296019 verified=yes
+elapsed_ns: 7224527
+ns_per_search: 7224.527
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=8296019 verified=yes
+elapsed_ns: 4775361
+ns_per_search: 4775.361
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode miss --pattern varied
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=0 mode=miss pattern=varied seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=0 verified=yes
+elapsed_ns: 14457119
+ns_per_search: 14457.119
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=0 verified=yes
+elapsed_ns: 9486151
+ns_per_search: 9486.151
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=0 verified=yes
+elapsed_ns: 9528220
+ns_per_search: 9528.220
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=0 verified=yes
+elapsed_ns: 14326435
+ns_per_search: 14326.435
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=0 verified=yes
+elapsed_ns: 14296679
+ns_per_search: 14296.679
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=0 verified=yes
+elapsed_ns: 9489337
+ns_per_search: 9489.337
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode mixed --pattern varied
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=500 mode=mixed pattern=varied seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=4105475 verified=yes
+elapsed_ns: 10716355
+ns_per_search: 10716.355
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=4105475 verified=yes
+elapsed_ns: 7197025
+ns_per_search: 7197.025
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=4105475 verified=yes
+elapsed_ns: 7056623
+ns_per_search: 7056.623
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=4105475 verified=yes
+elapsed_ns: 10726975
+ns_per_search: 10726.975
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=4105475 verified=yes
+elapsed_ns: 10733667
+ns_per_search: 10733.667
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=4105475 verified=yes
+elapsed_ns: 7174293
+ns_per_search: 7174.293
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode head --pattern shared-prefix
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=1000 mode=head pattern=shared-prefix seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=6247400 verified=yes
+elapsed_ns: 5711
+ns_per_search: 5.711
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=6247400 verified=yes
+elapsed_ns: 7334
+ns_per_search: 7.334
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=6247400 verified=yes
+elapsed_ns: 7193
+ns_per_search: 7.193
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=6247400 verified=yes
+elapsed_ns: 6532
+ns_per_search: 6.532
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=6247400 verified=yes
+elapsed_ns: 6493
+ns_per_search: 6.493
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=6247400 verified=yes
+elapsed_ns: 7173
+ns_per_search: 7.173
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode tail --pattern shared-prefix
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=1000 mode=tail pattern=shared-prefix seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=10342400 verified=yes
+elapsed_ns: 15737777
+ns_per_search: 15737.777
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=10342400 verified=yes
+elapsed_ns: 22790002
+ns_per_search: 22790.002
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=10342400 verified=yes
+elapsed_ns: 19653519
+ns_per_search: 19653.519
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=10342400 verified=yes
+elapsed_ns: 15736846
+ns_per_search: 15736.846
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=10342400 verified=yes
+elapsed_ns: 15576635
+ns_per_search: 15576.635
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=10342400 verified=yes
+elapsed_ns: 19648419
+ns_per_search: 19648.419
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode hit --pattern shared-prefix
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=1000 mode=hit pattern=shared-prefix seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=8296019 verified=yes
+elapsed_ns: 7902918
+ns_per_search: 7902.918
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=8296019 verified=yes
+elapsed_ns: 9790511
+ns_per_search: 9790.511
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=8296019 verified=yes
+elapsed_ns: 9823132
+ns_per_search: 9823.132
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=8296019 verified=yes
+elapsed_ns: 7922774
+ns_per_search: 7922.774
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=8296019 verified=yes
+elapsed_ns: 7920881
+ns_per_search: 7920.881
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=8296019 verified=yes
+elapsed_ns: 9927618
+ns_per_search: 9927.618
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode miss --pattern shared-prefix
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=0 mode=miss pattern=shared-prefix seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=0 verified=yes
+elapsed_ns: 15746623
+ns_per_search: 15746.623
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=0 verified=yes
+elapsed_ns: 19658448
+ns_per_search: 19658.448
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=0 verified=yes
+elapsed_ns: 19651855
+ns_per_search: 19651.855
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=0 verified=yes
+elapsed_ns: 15600881
+ns_per_search: 15600.881
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=0 verified=yes
+elapsed_ns: 15617542
+ns_per_search: 15617.542
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=0 verified=yes
+elapsed_ns: 19530048
+ns_per_search: 19530.048
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+Command: ./build/linkbench --lists 4 --nodes 4096 --size 64 --queries 1000 --repeat 3 --mode mixed --pattern shared-prefix
+Linked-list search benchmark (no hash)
+lists=4 nodes_per_list=4096 total_nodes=16384 payload_bytes=64 header_bytes=32
+queries=1000 expected_hits=500 mode=mixed pattern=shared-prefix seed=42 repeat=3
+measurement_scope=user-space search loop; allocation/generation/output excluded
+Each counter group replays identical warmed queries; N/A is never a zero count.
+
+algorithm=baseline trial=1 checksum=4105475 verified=yes
+elapsed_ns: 19967196
+ns_per_search: 19967.196
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=1 checksum=4105475 verified=yes
+elapsed_ns: 14532210
+ns_per_search: 14532.210
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=2 checksum=4105475 verified=yes
+elapsed_ns: 14534284
+ns_per_search: 14534.284
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=2 checksum=4105475 verified=yes
+elapsed_ns: 11753918
+ns_per_search: 11753.918
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=baseline trial=3 checksum=4105475 verified=yes
+elapsed_ns: 11690549
+ns_per_search: 11690.549
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
+
+algorithm=optimized trial=3 checksum=4105475 verified=yes
+elapsed_ns: 14549382
+ns_per_search: 14549.382
+instructions: N/A [instructions: Permission denied (errno=13)]
+cycles: N/A [instructions: Permission denied (errno=13)]
+L1D_load_accesses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_load_misses: N/A [L1D-loads: Permission denied (errno=13)]
+L1D_store_accesses: N/A [L1D-stores: Permission denied (errno=13)]
+memory_accesses_L1D_loads_plus_stores: N/A [requires both loads and stores]
+L1D_load_hit_rate_pct: N/A [unsupported, zero accesses, or inconsistent counters]
+hardware_metrics: incomplete
